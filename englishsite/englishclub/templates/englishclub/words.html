@@ -1,0 +1,21 @@
+{% extends 'englishclub/main.html' %}
+
+
+{% block content %}
+
+
+<form method="post">
+
+    <h1 class="text">{{test}}</h1>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-danger">Проверить</button>
+
+
+</form>
+
+
+{{list}}
+{{form_list}}
+{{w2}}
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'englishclub/main.html' %}
+
+
+
+
+{% block content %}
+
+<style>
+    .text_make{
+        margin-top:-200px;
+
+
+
+    }
+
+
+
+    }
+
+
+</style>
+
+
+
+<div class="text_make">
+    {% for i in texts %}
+        <h1>{{i.title}}</h1>
+        <p>{{i.anons}}</p>
+        <a href="{{ i.pk }}"><button type="submit">Открыть текст</button></a>
+        <hr class="line">
+
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<button class="btn btn-warning" style="margin-right:-1000px;margin-top:-600px">Добавить свой текст</button>
+
+
+
+
+
+
+
+
+
+{% endblock %}

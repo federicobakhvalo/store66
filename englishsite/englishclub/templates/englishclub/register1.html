@@ -1,0 +1,62 @@
+{% extends 'englishclub/main.html' %}
+
+
+
+
+{% block content %}
+
+<style>
+    .table {
+	    width: 100%;
+	    margin-bottom: 20px;
+	    border-collapse: collapse;
+	    margin-top:-100px;
+	    font-size:20px;
+}
+    .table th {
+	    font-weight: bold;
+	    padding: 5px;
+	    background: red;
+	    border: 1px solid #dddddd;
+}
+    .table td {
+	    border: 2px solid white;
+	    padding: 5px;
+	    color:blue;
+}
+    .table tr td:first-child, .table tr th:first-child {
+	    border-left: none;
+}
+    .table tr td:last-child, .table tr th:last-child {
+	    border-right: none;
+}
+
+
+
+</style>
+
+
+
+
+
+<table class="table">
+    <tr style="">
+        <th>EN</th>
+        <th>RU</th>
+    </tr>
+    {% for item in dict %}
+    <tr>
+        <td>{{ item.en }}</td>
+        <td>{{ item.ru}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+
+
+{% endblock %}
