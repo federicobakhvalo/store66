@@ -6,16 +6,18 @@
 
 <form method="post">
 
-    <h1 class="text">{{test}}</h1>
+    <h1 class="">{{word}}</h1>
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit" class="btn btn-danger">Проверить</button>
 
 
+
 </form>
 
 
-{{list}}
-{{form_list}}
-{{w2}}
+<a href ="{% url 'res' %}"><button type="submit" class="btn btn-warning" style="margin-top:100px">Посмотреть результат </button></a>
+
+
+
 {% endblock %}

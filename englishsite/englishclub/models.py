@@ -36,12 +36,10 @@ class VocabularyModel(models.Model):
 
 
 
-class TestWordsModel(models.Model):
-    UserID=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
-    translate=models.CharField(verbose_name='Перевод',max_length=100)
 
 
 
-    def save(self, *args ,**kwargs):
-        self.translate=self.translate.lower()
-        return super(TestWordsModel,self).save(*args,**kwargs)
+
+
+
+

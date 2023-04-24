@@ -31,10 +31,10 @@ class VocabularyForm(forms.ModelForm):
 
 
 
-class WordsForm(forms.ModelForm):
-    class Meta:
-        model=TestWordsModel
-        fields=['translate']
+class WordForm(forms.Form):
+    translate=forms.CharField(label='Перевод',max_length=200)
+
+
 
 
 

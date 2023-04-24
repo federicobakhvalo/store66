@@ -8,7 +8,10 @@ urlpatterns = [
     path('logout/',logout_user,name='logout'),
     path('dictionary/',Vocabulary.as_view(),name='dict'),
     path('show/',ShowVocabulary.as_view(),name='show'),
-    path('test/',TestWord.as_view(),name='test')
+    path('test/',TestWord.as_view(),name='test'),
+    path('res/',ShowResult.as_view(),name='res'),
+
+
 
 
 

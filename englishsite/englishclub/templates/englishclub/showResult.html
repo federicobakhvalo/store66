@@ -1,0 +1,38 @@
+{% extends 'englishclub/main.html' %}
+
+
+{% block content %}
+
+<table>
+    <tr class="cols">
+        <th>EN</th>
+        <th>RU</th>
+        <th>Твой ответ</th>
+        <th>Результат</th>
+    </tr>
+    <tr>
+        {% for i in zip %}
+            {% for q in i %}
+                <td>{{q}}</td>
+                
+            {% endfor %}
+        {% endfor %}
+
+
+
+    </tr>
+
+
+
+
+
+
+</table>
+
+
+    
+
+
+
+
+{% endblock %}
